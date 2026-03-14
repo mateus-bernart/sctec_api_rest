@@ -5,7 +5,6 @@ import {
   NotFoundError,
   ForbiddenError,
 } from "infra/errors";
-import user from "models/user";
 
 function onNoMatchHandler(request, response) {
   const publicErrorObject = new MethodNotAllowedError();
