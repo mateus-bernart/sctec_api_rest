@@ -3,7 +3,6 @@ import {
   MethodNotAllowedError,
   ValidationError,
   NotFoundError,
-  UnauthorizedError,
   ForbiddenError,
 } from "infra/errors";
 import user from "models/user";
