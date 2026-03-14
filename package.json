@@ -1,4 +1,8 @@
 {
+  "name": "tecsc-api-rest",
+  "version": "1.0.0",
+  "description": "Projeto para desenvolver API REST para empreendimentos.",
+  "main": "index.js",
   "scripts": {
     "dev": "trap \"npm run services:down\" INT EXIT && npm run services:up && npm run services:wait:database && npm run migrations:up && next dev",
     "test": "npm run services:up && concurrently -n next,jest --hide next -k -s command-jest 'next dev' 'jest --runInBand'",
@@ -11,7 +15,11 @@
     "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "services:wait:database": "node ./infra/wait-for-postgres.js"
   },
+  "author": "",
+  "license": "MIT",
   "dependencies": {
+    "@types/jest": "^30.0.0",
+    "async-retry": "^1.3.3",
     "concurrently": "^9.2.1",
     "dotenv": "^17.3.1",
     "dotenv-expand": "^12.0.3",
@@ -19,6 +27,7 @@
     "next": "^16.1.6",
     "next-connect": "^1.0.0",
     "node-pg-migrate": "^8.0.4",
-    "pg": "^8.20.0"
+    "pg": "^8.20.0",
+    "uuid": "^13.0.0"
   }
 }

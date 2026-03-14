@@ -11,11 +11,16 @@ const defaultMigationOptions = {
   migrationsTable: "pgmigrations",
 };
 
+async function getMigrationRunner() {
+  const module = await import("node-pg-migrate");
+  return module.runner;
+}
+
 async function listPendingMigrations() {
   let dbClient;
   try {
     dbClient = await database.getNewClient();
-
+    const migrationRunner = await getMigrationRunner();
     const pendingMigrations = await migrationRunner({
       ...defaultMigationOptions,
       dbClient,
@@ -37,6 +42,7 @@ async function runPendingMigrations() {
   let dbClient;
   try {
     dbClient = await database.getNewClient();
+    const migrationRunner = await getMigrationRunner();
 
     const migratedMigrations = await migrationRunner({
       ...defaultMigationOptions,

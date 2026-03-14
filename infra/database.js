@@ -20,9 +20,6 @@ async function query(queryObject) {
 }
 
 export const getNewClient = async () => {
-
-  console.log(process.env.DATABASE_URL);
-  
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
