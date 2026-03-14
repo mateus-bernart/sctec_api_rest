@@ -1,4 +1,4 @@
-import orchestrator from "tests/integration/orchestrator";
+import orchestrator from "tests/orchestrator";
 import { version as uuidVersion } from "uuid";
 
 beforeAll(async () => {
