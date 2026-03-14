@@ -8,35 +8,35 @@ beforeAll(async () => {
 });
 
 describe("POST /api/v1/businesses", () => {
-  test("Return valid response", async () => {
-    const createdUserResponse = await fetch(
+  test("Create business", async () => {
+    const createdBusinessResponse = await fetch(
       "http://localhost:3000/api/v1/businesses",
       {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
-          name: "Mateus Empresa",
-          owner_name: "Mateus",
-          city: "Concordia",
+          name: "Empresa teste",
+          owner_name: "Mateus Bernart",
+          city: "Concórdia",
           sector: "Tecnologia",
           email: "mateusbernart14@gmail.com",
         }),
       },
     );
 
-    expect(createdUserResponse.status).toBe(201);
+    expect(createdBusinessResponse.status).toBe(201);
 
-    const responseBody = await createdUserResponse.json();
+    const responseBody = await createdBusinessResponse.json();
 
-    // expect(uuidVersion(responseBody.id)).toBe(4);
-    // expect(Date.parse(responseBody.created_at)).not.toBeNaN();
-    // expect(Date.parse(responseBody.updated_at)).not.toBeNaN();
+    expect(uuidVersion(responseBody.id)).toBe(4);
+    expect(Date.parse(responseBody.created_at)).not.toBeNaN();
+    expect(Date.parse(responseBody.updated_at)).not.toBeNaN();
 
     expect(responseBody).toEqual({
       id: responseBody.id,
-      name: "Mateus Empresa",
-      owner_name: "Mateus",
-      city: "Concordia",
+      name: "Empresa teste",
+      owner_name: "Mateus Bernart",
+      city: "Concórdia",
       sector: "Tecnologia",
       email: "mateusbernart14@gmail.com",
       created_at: responseBody.created_at,

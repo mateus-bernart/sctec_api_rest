@@ -4,7 +4,7 @@ import {
   ValidationError,
   NotFoundError,
   ForbiddenError,
-} from "infra/errors";
+} from "infra/errors/errors";
 
 function onNoMatchHandler(request, response) {
   const publicErrorObject = new MethodNotAllowedError();

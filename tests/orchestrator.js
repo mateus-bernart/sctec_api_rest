@@ -1,6 +1,8 @@
-const { default: database } = require("infra/database");
-const { default: migrator } = require("models/migrator");
+import { faker } from "@faker-js/faker/.";
 import retry from "async-retry";
+import database from "infra/database/database";
+import business from "models/business";
+import migrator from "models/migrator";
 
 async function waitForAllServices() {
   await waitForWebServer();
@@ -25,20 +27,28 @@ async function runPendingMigrations() {
   await migrator.runPendingMigrations();
 }
 
-async function createEnterprise(userObject = {}) {
-  return await user.create({
-    username:
-      userObject.username || faker.internet.username().replace(/[_.-]/g, ""),
-    email: userObject.email || faker.internet.email(),
-    password: userObject.password || "validpassword",
+async function createBusiness(businessObject = {}) {
+  return await business.create({
+    name: businessObject.name || faker.company.name().replace(/[_.-]/g, ""),
+    owner_name:
+      businessObject.owner_name ||
+      faker.internet.username().replace(/[_.-]/g, ""),
+    city: businessObject.city || faker.location.city(),
+    sector: businessObject.sector || faker.commerce.department(),
+    email: businessObject.email || faker.internet.email(),
   });
+}
+
+async function deleteAllBusinesses() {
+  await business.deleteAll();
 }
 
 const orchestrator = {
   runPendingMigrations,
-  createEnterprise,
+  createBusiness,
   clearDatabase,
   waitForAllServices,
+  deleteAllBusinesses,
 };
 
 export default orchestrator;
