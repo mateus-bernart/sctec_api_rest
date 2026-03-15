@@ -1,0 +1,166 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: API REST SCTEC - Mateus Davi Bernart
+meta:
+  id: wrk_3e7a90130c964139a5758269b16b8da6
+  created: 1773536406591
+  modified: 1773536766467
+  description: ""
+collection:
+  - url: http://localhost:3000/api/v1/businesses
+    name: Buscar todas empresas
+    meta:
+      id: req_b7a189ede20c4106babc850ef5b1d309
+      created: 1773536406596
+      modified: 1773536442061
+      isPrivate: false
+      description: ""
+      sortKey: -1773536406596
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/v1/businesses/4cd22451-b2e4-409c-8f3f-5714f784ad36
+    name: Buscar empresa por id
+    meta:
+      id: req_c7aa4f9992ed4509bf8a2130c56bffde
+      created: 1773536477977
+      modified: 1773536639992
+      isPrivate: false
+      description: ""
+      sortKey: -1773536406546
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/v1/businesses
+    name: Criar empresa
+    meta:
+      id: req_35c636c9402141a097c19c93a74d06ce
+      created: 1773536522549
+      modified: 1773536611551
+      isPrivate: false
+      description: ""
+      sortKey: -1773536406496
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "NomeDaEmpresa",
+        	"owner_name": "NomeProprietario",
+        	"city": "Cidade",
+        	"sector": "Setor",
+        	"email": "Email@Email"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/v1/businesses/4cd22451-b2e4-409c-8f3f-5714f784ad36
+    name: Atualizar empresa
+    meta:
+      id: req_eac527001c8848379405640f2e627b3a
+      created: 1773536649939
+      modified: 1773536686732
+      isPrivate: false
+      description: ""
+      sortKey: -1773536406446
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "NomeDaEmpresaAtualizado",
+        	"owner_name": "NomeProprietarioAtualizado",
+        	"city": "CidadeAtualizado",
+        	"sector": "SetorAtualizado",
+        	"email": "Email@EmailAtualizado"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/v1/businesses/4cd22451-b2e4-409c-8f3f-5714f784ad36
+    name: Excluir empresa
+    meta:
+      id: req_11dd582ce541476a94d631b7b657551c
+      created: 1773536729532
+      modified: 1773536738756
+      isPrivate: false
+      description: ""
+      sortKey: -1773536406396
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_adc42a09d96952029735e9eb781e77a92830dbbf
+    created: 1773536406592
+    modified: 1773536406592
+environments:
+  name: Base Environment
+  meta:
+    id: env_adc42a09d96952029735e9eb781e77a92830dbbf
+    created: 1773536406592
+    modified: 1773536406592
+    isPrivate: false

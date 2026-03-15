@@ -27,44 +27,44 @@ Pasta `tests`: Segue o mesmo fluxo de acesso dos endpoints, porém para os teste
 tecsc-api-rest
 │
 ├─ infra
-│ ├─ database
-│ │ ├─ migrations
-│ │ │ └─ ...arquivos de migração
-│ │ │
-│ │ ├─ compose.yaml
-│ │ ├─ database.js
-│ │ └─ wait-for-postgres.js
-│ │
-│ ├─ controller.js
-│ └─ errors.js
+│  ├─ database
+│  │  ├─ migrations
+│  │  │  └─ ...arquivos de migração
+│  │  │
+│  │  ├─ compose.yaml
+│  │  ├─ database.js
+│  │  └─ wait-for-postgres.js
+│  │
+│  ├─ controller.js
+│  └─ errors.js
 │
 ├─ models
-│ ├─ business.js
-│ └─ migrator.js
+│  ├─ business.js
+│  └─ migrator.js
 │
 ├─ pages
-│ └─ api
-│ └─ v1
-│ ├─ businesses
-│ │ ├─ index.js
-│ │ └─ [id]
-│ │ └─ index.js
-│ │
-│ └─ status
-│ └─ index.js
+│  └─ api
+│     └─ v1
+│        ├─ businesses
+│        │  ├─ index.js
+│        │  └─ [id]
+│        │     └─ index.js
+│        │
+│        └─ status
+│           └─ index.js
 │
 ├─ tests
-│ └─ integration
-│ └─ api
-│ └─ v1
-│ ├─ businesses
-│ │ ├─ delete.test.js
-│ │ ├─ get.test.js
-│ │ ├─ post.test.js
-│ │ └─ put.test.js
-│ │
-│ └─ status
-│ └─ get.test.js
+│  └─ integration
+│     └─ api
+│        └─ v1
+│           ├─ businesses
+│           │  ├─ delete.test.js
+│           │  ├─ get.test.js
+│           │  ├─ post.test.js
+│           │  └─ put.test.js
+│           │
+│           └─ status
+│              └─ get.test.js
 │
 ├─ .env.development
 ├─ jest.config.js
@@ -72,6 +72,10 @@ tecsc-api-rest
 ├─ orchestrator.js
 ├─ package.json
 └─ README.md
+
+### Arquivo de coleção de requisições para testar no projeto (importar para Postman, Insomnia, etc.):
+- [text](Insomnia_2026-03-14.har)
+- [text](Insomnia_2026-03-14.yaml)
 
 ## Instruções necessárias para sua execução:
 
