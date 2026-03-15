@@ -84,6 +84,7 @@ tecsc-api-rest
 
 - Clonar o repositório
 - rodar `npm install` na pasta `sctec_api_rest`
+- ter docker instalado na sua máquina.
 
 ## Iniciar o servidor:
 
