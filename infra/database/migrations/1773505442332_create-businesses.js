@@ -1,4 +1,4 @@
-export const up = (pgm) => {
+exports.up = (pgm) => {
   pgm.createTable("businesses", {
     id: {
       type: "uuid",

@@ -84,7 +84,13 @@ tecsc-api-rest
 
 - Clonar o repositório
 - rodar `npm install` na pasta `sctec_api_rest`
-- ter docker instalado na sua máquina.
+
+### Requisitos técnicos:
+
+- node v24.14.0
+- docker instalado
+- npm v11.9.0
+- Se for rodar em Windows: rodar em ambiente WSL (preferencialmente Ubuntu 24.04)
 
 ## Iniciar o servidor:
 
