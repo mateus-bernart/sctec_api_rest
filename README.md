@@ -90,7 +90,9 @@ tecsc-api-rest
 - node v24.14.0
 - docker instalado
 - npm v11.9.0
-- Se for rodar em Windows: rodar em ambiente WSL (preferencialmente Ubuntu 24.04)
+- Se for rodar em Windows:
+- - rodar em ambiente WSL (preferencialmente Ubuntu 24.04)
+- - Teste de retornar a versão do postgres pode variar dependendo da arquitetura do processador de x86_64 (windows/linux) para aarch64 (mac) ou outros. Mas os testes do endpoint ainda funcionam sem problemas.
 
 ## Iniciar o servidor:
 
