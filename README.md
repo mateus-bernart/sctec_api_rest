@@ -73,6 +73,11 @@ tecsc-api-rest
 ├─ package.json
 └─ README.md
 
+### Arquivo de coleção de requisições para testar no projeto (importar para Postman, Insomnia, etc.):
+
+- [text](Insomnia_2026-03-14.har)
+- [text](Insomnia_2026-03-14.yaml)
+
 ## Instruções necessárias para sua execução:
 
 - Clonar o repositório
@@ -92,7 +97,5 @@ tecsc-api-rest
 - `npm run test`
 
 ## Link do vídeo:
-link
 
-Video:
-solução desenvolvida, explicar suas principais funcionalidades, demonstrar brevemente o funcionamento do sistema (quando aplicável) e comentar as principais decisões técnicas adotadas.
+https://youtu.be/euO6aeR5dzc
