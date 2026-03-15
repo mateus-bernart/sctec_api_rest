@@ -24,6 +24,7 @@ Pasta `pages`: Segue o fluxo de acesso aos endpoints em forma de pastas, recurso
 
 Pasta `tests`: Segue o mesmo fluxo de acesso dos endpoints, porém para os testes utilizando o Jest, internamente de cada um é separado o método pelo nome do arquivo (ex: `get.test.js`). Internamente abrangendo funcionalidades e exceções/erros.
 
+```
 tecsc-api-rest
 │
 ├─ infra
@@ -72,6 +73,7 @@ tecsc-api-rest
 ├─ orchestrator.js
 ├─ package.json
 └─ README.md
+```
 
 ### Arquivo de coleção de requisições para testar no projeto (importar para Postman, Insomnia, etc.):
 
